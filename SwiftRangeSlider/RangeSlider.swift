@@ -257,7 +257,7 @@ import QuartzCore
     upperKnob.contentsScale = UIScreen.main.scale
     layer.addSublayer(upperKnob)
     
-    lowerLabel.alignmentMode = kCAAlignmentCenter
+    lowerLabel.alignmentMode = CATextLayerAlignmentMode.center
     lowerLabel.fontSize = labelFontSize
     lowerLabel.frame = CGRect(x: 0, y: 0, width: 75, height: labelFontSize)
     lowerLabel.contentsScale = UIScreen.main.scale
@@ -265,7 +265,7 @@ import QuartzCore
     lowerLabel.foregroundColor = labelColor.cgColor
     layer.addSublayer(lowerLabel)
     
-    upperLabel.alignmentMode = kCAAlignmentCenter
+    upperLabel.alignmentMode = CATextLayerAlignmentMode.center
     upperLabel.fontSize = labelFontSize
     upperLabel.frame = CGRect(x: 0, y: 0, width: 75, height: labelFontSize)
     upperLabel.contentsScale = UIScreen.main.scale
@@ -340,8 +340,8 @@ import QuartzCore
     lowerLabel.foregroundColor = labelColor.cgColor
     upperLabel.foregroundColor = labelColor.cgColor
     
-    lowerLabelTextSize = (lowerLabel.string as! NSString).size(attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: labelFontSize)])
-    upperLabelTextSize = (upperLabel.string as! NSString).size(attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: labelFontSize)])
+      lowerLabelTextSize = (lowerLabel.string as! NSString).size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: labelFontSize)])
+      upperLabelTextSize = (upperLabel.string as! NSString).size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: labelFontSize)])
   }
   
   ///Updates the labels positions above the knobs.
