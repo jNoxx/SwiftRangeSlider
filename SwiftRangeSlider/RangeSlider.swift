@@ -492,7 +492,7 @@ import QuartzCore
   func animateKnob(knob: RangeSliderKnob, selected:Bool) {
     CATransaction.begin()
     CATransaction.setAnimationDuration(0.3)
-    CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn))
+      CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn))
     
     knob.transform = selected ? CATransform3DMakeScale(selectedKnobDiameterMultiplier, selectedKnobDiameterMultiplier, 1) : CATransform3DIdentity
     
