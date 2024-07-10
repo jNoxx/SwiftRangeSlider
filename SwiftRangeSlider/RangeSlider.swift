@@ -410,12 +410,12 @@ import QuartzCore
             return true
         }
         
-        if lowerKnob.frame.contains(previousLocation) {
+        if lowerKnobFrame.contains(previousLocation) {
             highlightKnob(lowerKnob, knobPosition: Knob.Lower)
             return true
         }
         
-        if upperKnob.frame.contains(previousLocation) {
+        if upperKnobFrame.contains(previousLocation) {
             highlightKnob(upperKnob, knobPosition: Knob.Upper)
             return true
         }
